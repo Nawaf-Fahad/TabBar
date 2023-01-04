@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct TabBarApp: App {
+    @State var num : Int = 4
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FloatingTabbar(selected: $num)
+             
         }
     }
 }
+
