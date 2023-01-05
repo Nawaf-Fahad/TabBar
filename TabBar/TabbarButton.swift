@@ -29,19 +29,12 @@ struct FloatingTabbar : View {
     
     @Binding var selected : Int
     @State var expand = false
-    
     @State var angle = 90.0
-    
     var body : some View {
-        
         HStack {
-            
             Spacer(minLength: 0)
-            
             HStack {
-                
                 if !self.expand {
-                    
                     Button(action: {
                         self.expand.toggle()
                     }) {
@@ -54,24 +47,15 @@ struct FloatingTabbar : View {
                     }
                 } /// if end
                 else {
-                    
                     TabbarButton(selected: $selected, numberSelected: 0, image: "person.crop.circle.fill")
-                    
                     Spacer()
-                    
                     TabbarButton(selected: $selected, numberSelected: 1, image: "building.columns.fill")
-                    
                     Spacer()
-                    
                     TabbarButton(selected: $selected, numberSelected: 2, image: "arrow.left.arrow.right")
-                    
                     Spacer()
-                    
                     TabbarButton(selected: $selected, numberSelected: 3, image: "chart.line.uptrend.xyaxis")
                         .padding(.trailing)
-                    
                     Spacer()
-                    
                     Button(action: {
                         self.expand.toggle()
                     }) {
@@ -88,6 +72,9 @@ struct FloatingTabbar : View {
             .padding(15)
             .shadow(color: .secondary, radius: 2, x: 2, y: 2)
             .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.0))
+
+                
+            
         } /// Outer HStack end
     }
 }
